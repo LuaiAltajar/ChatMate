@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Add Room | {% endblock %}
+
+{% block content %}
+<div class="p-10 lg:p-20 text-center">
+    <h1 class="text-3xl lg:text-6xl text-white">Add Room</h1>
+</div>
+
+<form method="post" action="." class="lg:w-1/2 px-4 mx-auto">
+    {% csrf_token %}
+
+    <div class="mb-5">
+        <label class="text-white">Name</label>
+        <input type="text" name="name" class="w-full mt-2 px-4 py-2 rounded-xl">
+    </div>
+
+    <button class="px-5 py-3 rounded-xl text-white bg-blue-600 hover:bg-blue-500">Create Room</button>
+</form>
+{% endblock %}
